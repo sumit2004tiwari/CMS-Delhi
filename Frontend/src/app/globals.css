@@ -1,0 +1,211 @@
+@import "animate.css";
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "PetrovSans-Book";
+  src: url("/fonts/PetrovSans-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display:  swap;
+}
+
+.petrovsans-book {
+  font-family: "PetrovSans-Book", "PetrovSans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+.petrovsans-semibold {
+  font-family: "PetrovSans";
+  font-weight: 600;
+  font-style:  normal;
+}
+
+.outfit-light {
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  font-style:  normal;
+}
+
+@font-face {
+  font-family: "PetrovSans";
+  src: url("/fonts/PetrovSans-Light.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PetrovSans";
+  src: url("/fonts/PetrovSans-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PetrovSans";
+  src: url("/fonts/PetrovSans-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PetrovSans";
+  src: url("/fonts/PetrovSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PetrovSans";
+  src: url("/fonts/PetrovSans-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("/fonts/Outfit-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "PetrovSans";
+
+  overflow-x: hidden;
+}
+
+main {
+    overflow-x: hidden !important;
+}
+
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.stroke-purple-500 {
+  -webkit-text-stroke: 1px #6210ff; /* or your desired neon color */
+  color: transparent;
+}
+
+.title-char {
+  display: inline-block;
+  overflow: hidden;
+  /* background-color: blue; */
+}
+
+.title-char > span {
+  position: relative;
+  display: block;
+  transform: translateY(100%);
+  will-change: transform;
+}
+
+.folder-shape {
+  width: 309px;
+  height: 271px;
+  background: #5e5e5e;
+  -webkit-clip-path: url(#folderClip);
+  clip-path: url(#folderClip);
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+body {
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+*::-webkit-scrollbar {
+  display: none; 
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
